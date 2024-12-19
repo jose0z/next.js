@@ -2,20 +2,221 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+  /* Estilos generales */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+}
+
+/* Logo */
+.navbar-logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Menú de navegación */
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin: 0 15px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-menu a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* Configuraciones de idioma y moneda */
+.navbar-settings {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+ 
+}
+.settings2{
+  border-left: 1px solid #ccc; /* Línea en el medio */
+  padding-left: 10px; /* Espacio para la línea */
+}
+/* Botones */
+.navbar-buttons .btn-signin,
+.navbar-buttons .btn-register {
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-buttons .btn-signin {
+    background-color: transparent;
+    color: #1619e9;
+  
+}
+
+.navbar-buttons .btn-signin:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.navbar-buttons .btn-register {
+    background-color: #3c12f7;
+    color: #fff;
+}
+
+.navbar-buttons .btn-register:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-menu li {
+        margin: 10px 0;
+    }
+    .navbar-settings,
+    .navbar-buttons {
+        margin-top: 10px;
+    }
+}
+.estudio{
+  background-color: #000000;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 2rem;
+}
+
+.google-button {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #ddd;
+    border: none;
+}
+
+.or-text {
+    margin: 0 10px;
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.remember-text {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.register-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #333;
+}
+
+.login-text {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.login-link {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }
